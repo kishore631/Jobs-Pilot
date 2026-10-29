@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Explore job opportunities, internships and practical career guidance with Jobs Pilot. Check eligibility and apply through official employer links."
+    />
+    <meta name="theme-color" content="#10243a" />
+    <title>Jobs Pilot | Jobs, Internships & Career Guidance</title>
+    <link rel="canonical" href="https://jobs-pilot.vercel.app/" />
+    <link rel="icon" href="./logo.jpeg" />
+    <link rel="stylesheet" href="./style.css" />
+    <script src="./jobs.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="topbar">
+      <div class="container header-inner">
+        <a class="brand" href="./index.html" aria-label="Jobs Pilot home">
+          <img
+            class="brand-logo"
+            src="./logo.jpeg"
+            alt="Jobs Pilot logo"
+            onerror="this.style.display = 'none'"
+          />
+          <span class="brand-name"
+            >Jobs <span class="brand-accent">Pilot</span
+            ><small>Find opportunities. Build your future.</small></span
+          >
+        </a>
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          Menu <span aria-hidden="true">☰</span>
+        </button>
+        <nav
+          class="header-navigation"
+          id="primary-nav"
+          aria-label="Main navigation"
+        >
+          <a class="active" href="./index.html">Home</a>
+          <a href="./jobs.html">Jobs</a>
+          <a href="./career-guides.html">Career Guidance</a>
+          <a href="./about.html">About</a>
+          <a class="nav-contact" href="./contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow">YOUR NEXT STEP STARTS HERE</p>
+            <h1>
+              Find the right opportunity for
+              <span class="text-accent">your future.</span>
+            </h1>
+            <p class="hero-description">
+              Explore job openings, internships and practical career advice.
+              Review the details and apply through the employer's official
+              application page.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="./jobs.html"
+                >Explore jobs <span aria-hidden="true">→</span></a
+              >
+              <a class="button button-secondary" href="./career-guides.html"
+                >Career guidance</a
+              >
+            </div>
+            <div class="trust-note">
+              <span class="trust-dot"></span> Clear job information. Official
+              application links.
+            </div>
+          </div>
+          <div class="hero-panel" aria-label="Job search">
+            <div class="panel-top">
+              <span class="panel-icon" aria-hidden="true">⌕</span>
+              <div>
+                <strong>Start your job search</strong>
+                <p>Search opportunities by role or location.</p>
+              </div>
+            </div>
+            <form
+              class="search-form"
+              id="home-search"
+              action="./jobs.html"
+              method="get"
+            >
+              <label for="home-keyword">Job title or keyword</label>
+              <input
+                id="home-keyword"
+                name="q"
+                type="search"
+                placeholder="e.g. Software Developer"
+              />
+              <label for="home-location">Location</label>
+              <input
+                id="home-location"
+                name="location"
+                type="search"
+                placeholder="e.g. Hyderabad or Remote"
+              />
+              <button class="button button-primary button-full" type="submit">
+                Search jobs
+              </button>
+            </form>
+            <div class="panel-foot">
+              <span aria-hidden="true">✓</span> Always review the official job
+              post before applying.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section section-tight">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">EXPLORE BY INTEREST</p>
+              <h2>Find your path</h2>
+            </div>
+            <a class="text-link" href="./jobs.html"
+              >View all jobs <span aria-hidden="true">→</span></a
+            >
+          </div>
+          <div class="category-grid">
+            <a class="category-card" href="./jobs.html?category=Freshers"
+              ><span class="category-icon" aria-hidden="true">✦</span
+              ><strong>Fresher jobs</strong><span>Start your career</span></a
+            >
+            <a class="category-card" href="./jobs.html?category=Technology"
+              ><span class="category-icon" aria-hidden="true">⌘</span
+              ><strong>Technology</strong><span>Software and IT roles</span></a
+            >
+            <a class="category-card" href="./jobs.html?category=Internship"
+              ><span class="category-icon" aria-hidden="true">↗</span
+              ><strong>Internships</strong
+              ><span>Learn through experience</span></a
+            >
+            <a class="category-card" href="./jobs.html?category=Experienced"
+              ><span class="category-icon" aria-hidden="true">▣</span
+              ><strong>Experienced roles</strong
+              ><span>Take the next step</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">RECENT OPPORTUNITIES</p>
+              <h2>Latest jobs</h2>
+              <p class="section-intro">
+                Listings are published after their details and application
+                source have been checked.
+              </p>
+            </div>
+            <a class="text-link" href="./jobs.html"
+              >Browse all <span aria-hidden="true">→</span></a
+            >
+          </div>
+          <div class="job-grid" id="featured-jobs" aria-live="polite">
+            <div class="loading-card">Loading job listings…</div>
+          </div>
+          <div class="center-action">
+            <a class="button button-secondary" href="./jobs.html"
+              >See all opportunities</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="guidance-band">
+        <div class="container guidance-inner">
+          <div>
+            <p class="eyebrow">CAREER TOOLKIT</p>
+            <h2>Prepare for more than just the application.</h2>
+            <p>
+              Build a stronger resume, prepare for interviews and learn how to
+              evaluate opportunities with confidence.
+            </p>
+          </div>
+          <a class="button button-light" href="./career-guides.html"
+            >Explore career guides <span aria-hidden="true">→</span></a
+          >
+        </div>
+      </section>
+      <section class="section">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">A CLEARER JOB SEARCH</p>
+              <h2>How Jobs Pilot helps</h2>
+            </div>
+          </div>
+          <div class="benefit-grid">
+            <article class="benefit-card">
+              <span class="benefit-icon" aria-hidden="true">01</span>
+              <h3>Understand the role</h3>
+              <p>
+                Review eligibility, experience, location and other available
+                details before you apply.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-icon" aria-hidden="true">02</span>
+              <h3>Apply at the source</h3>
+              <p>
+                Use the employer's official application page whenever an
+                official link is available.
+              </p>
+            </article>
+            <article class="benefit-card">
+              <span class="benefit-icon" aria-hidden="true">03</span>
+              <h3>Keep learning</h3>
+              <p>
+                Use practical career resources to improve your applications and
+                interview preparation.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-main">
+        <div class="footer-brand">
+          <a class="brand brand-footer" href="./index.html"
+            ><img
+              class="brand-logo"
+              src="./logo.jpeg"
+              alt=""
+              onerror="this.style.display = 'none'"
+            /><span class="brand-name"
+              >Jobs <span class="brand-accent">Pilot</span
+              ><small>Find opportunities. Build your future.</small></span
+            ></a
+          >
+          <p>
+            Independent job information and career guidance to help people make
+            informed career decisions.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h2>Explore</h2>
+          <a href="./jobs.html">Latest jobs</a
+          ><a href="./career-guides.html">Career guidance</a
+          ><a href="./about.html">About us</a
+          ><a href="./contact.html">Contact us</a>
+        </div>
+        <div class="footer-column">
+          <h2>Information</h2>
+          <a href="./privacy-policy.html">Privacy policy</a
+          ><a href="./terms.html">Terms and conditions</a
+          ><a href="./disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span
+          >© <span data-current-year>2026</span> Jobs Pilot. All rights
+          reserved.</span
+        ><span>Verify details with the employer before applying.</span>
+      </div>
+    </footer>
+  </body>
+</html>
